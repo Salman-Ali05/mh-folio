@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hunter Camp Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top-right-ui">
+        <div class="theme-picker" id="themePicker">
+            <button id="themeToggle" class="buttons theme-toggle" type="button" aria-haspopup="listbox"
+                aria-expanded="false" aria-label="Choose theme">
+                <span id="themeCurrentLabel">MHW:I</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="theme-dropdown" id="themeDropdown" role="listbox" aria-label="Theme selection">
+                <button class="theme-option is-active" type="button" data-theme-option="mhwi" role="option"
+                    aria-selected="true">
+                    <span>MHW:I</span>
+                    <small>Iceborne</small>
+                </button>
+
+                <button class="theme-option" type="button" data-theme-option="mhwilds" role="option"
+                    aria-selected="false">
+                    <span>MHWilds</span>
+                    <small>Wilds</small>
+                </button>
+            </div>
+        </div>
+        <button id="languageToggle" class="buttons language-toggle" type="button" aria-label="Switch to English">
+            <span id="languageToggleText">EN</span>
+        </button>
+        <button id="audioToggle" class="buttons audio-toggle" type="button" aria-label="Toggle audio">
+            <i class="fa-solid fa-volume-high"></i>
+        </button>
+        <button id="thanksButton" class="buttons thanks-button" type="button" aria-label="Page de remerciements">
+            <a href="./thank-you.html"><i class="fa-solid fa-handshake"></i></a>
+        </button >
+    </div>
+
+    <main class="scroll-stage" id="scrollStage">
+        <section class="camp-scene" id="campScene">
+            <div class="camera" id="camera">
+                <div class="world">
+                    <div class="road-border"></div>
+                </div>
+            </div>
+
+            <div class="vignette"></div>
+            <div class="scene-transition" id="sceneTransition"></div>
+
+            <div class="start-screen" id="startScreen">
+                <div class="start-title" id="startTitle" data-title="Portfolio du chasseur"></div>
+                <p class="start-hint" id="startHint">Clique pour entrer dans le camp</p>
+            </div>
+
+            <div class="camp-ui">
+                <button id="replayButton" class="camp-replay-button" type="button">
+                    ↻
+                </button>
+
+                <div class="camp-layout">
+                    <aside class="camp-menu">
+                        <div class="camp-menu-title-row">
+                            <span class="camp-menu-title" id="campMenuTitle">Menu</span>
+                        </div>
+
+                        <div class="camp-tabs-bar" id="campTabsBar"></div>
+
+                        <div class="camp-submenu">
+                            <div class="camp-submenu-label" id="campSubmenuLabel">Projets</div>
+                            <nav class="camp-submenu-list" id="campSubmenuList"></nav>
+                        </div>
+
+                        <div class="camp-music-panel" id="campMusicPanel" aria-hidden="true">
+                            <div class="camp-music-panel-header">
+                                <div>
+                                    <span class="camp-music-kicker">Item Box</span>
+                                    <h2>Camp Music</h2>
+                                </div>
+
+                                <button id="campMusicClose" class="camp-music-close" type="button"
+                                    aria-label="Close camp music panel">
+                                    ×
+                                </button>
+                            </div>
+
+                            <div class="camp-music-panel-info">
+                                <span id="campMusicCounter">1/6</span>
+                                <span id="campMusicCurrent">Astera Theme</span>
+                            </div>
+
+                            <div class="camp-music-grid" id="campMusicGrid"></div>
+
+                            <div class="camp-music-player">
+                                <div class="camp-music-player-top">
+                                    <span id="campMusicPlayerLabel">No BGM selected</span>
+                                    <span id="campMusicPlayerTime">0:00 / 0:00</span>
+                                </div>
+
+                                <button id="campMusicProgress" class="camp-music-progress" type="button"
+                                    aria-label="Seek camp music">
+                                    <span id="campMusicProgressFill"></span>
+                                </button>
+
+                                <div class="camp-music-controls">
+                                    <button id="campMusicPrev" class="camp-music-control" type="button"
+                                        aria-label="Previous music">
+                                        <i class="fa-solid fa-backward-step"></i>
+                                    </button>
+
+                                    <button id="campMusicPlayToggle" class="camp-music-control is-main" type="button"
+                                        aria-label="Play or pause music">
+                                        <i id="campMusicPlayIcon" class="fa-solid fa-play"></i>
+                                    </button>
+
+                                    <button id="campMusicNext" class="camp-music-control" type="button"
+                                        aria-label="Next music">
+                                        <i class="fa-solid fa-forward-step"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="camp-center-space">
+                        <div class="campfire-3d-area">
+                            <canvas id="campfireStage" class="campfire-stage"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="camp-character-area">
+                        <div class="felyne-chat-bubble">
+                            <p>. . .</p>
+                        </div>
+                        <canvas id="characterStage" class="character-stage"></canvas>
+                        <div class="felyne-interaction-hint" id="felyneInteractionHint">
+                            Parler au Felyne
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="hunter-popup" id="hunterPopup" aria-hidden="true">
+        <div class="hunter-popup-backdrop" data-popup-close></div>
+
+        <section class="hunter-popup-panel" role="dialog" aria-modal="true" aria-labelledby="hunterPopupTitle">
+            <button class="hunter-popup-close" id="hunterPopupClose" type="button" aria-label="Fermer">
+                ×
+            </button>
+
+            <header class="hunter-popup-header">
+                <div>
+                    <p class="hunter-popup-kicker" id="hunterPopupKicker">Guild Card</p>
+                    <h2 id="hunterPopupTitle">Hunter Profile</h2>
+                </div>
+
+            </header>
+
+            <div class="hunter-popup-body">
+                <aside class="hunter-equipment-column hunter-equipment-left">
+                    <div class="equipment-slot" data-equipment="head">Tête</div>
+                    <div class="equipment-slot" data-equipment="chest">Torse</div>
+                    <div class="equipment-slot" data-equipment="arms">Bras</div>
+                    <div class="equipment-slot" data-equipment="waist">Taille</div>
+                    <div class="equipment-slot" data-equipment="legs">Jambes</div>
+                </aside>
+
+                <div class="hunter-preview-card">
+                    <canvas id="hunterProfileStage" class="hunter-profile-stage"></canvas>
+                </div>
+
+                <aside class="hunter-info-panel">
+                    <h3 id="hunterInfoTitle">Présentation</h3>
+                    <p id="hunterInfoDescription">
+                        Sélectionne un onglet pour afficher les informations associées.
+                    </p>
+
+                    <div class="hunter-stats-grid" id="hunterStatsGrid"></div>
+
+                    <div class="hunter-tags" id="hunterTags"></div>
+                </aside>
+            </div>
+
+            <footer class="hunter-inventory-strip" id="hunterInventoryStrip"></footer>
+        </section>
+    </div>
+
+    <script type="module" src="public/script.js"></script>
+</body>
+
+</html>

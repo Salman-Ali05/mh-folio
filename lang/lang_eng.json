@@ -1,0 +1,260 @@
+{
+    "lang_eng": {
+        "meta": {
+            "pageTitle": "Hunter Camp Portfolio"
+        },
+        "startScreen": {
+            "title": "Hunter'sPortfolio",
+            "hint": "Click to enter the camp"
+        },
+        "camp": {
+            "menuTitle": "Menu",
+            "defaultSubmenuLabel": "Projects",
+            "felyneHint": "Talk to the Felyne",
+            "replayButton": "↻"
+        },
+        "popup": {
+            "kicker": "Guild Card",
+            "title": "Hunter Profile",
+            "closeLabel": "Close",
+            "defaultInfoTitle": "Overview",
+            "defaultDescription": "Select a tab to display the related information."
+        },
+        "equipment": {
+            "head": "Head",
+            "chest": "Chest",
+            "arms": "Arms",
+            "waist": "Waist",
+            "legs": "Legs"
+        },
+        "accessibility": {
+            "tabLabel": "{{label}} tab"
+        },
+        "menu": {
+            "projects": {
+                "label": "Projects",
+                "items": {
+                    "featured": "Featured projects",
+                    "all": "All projects",
+                    "technicalCases": "Technical cases"
+                }
+            },
+            "skills": {
+                "label": "Skills",
+                "items": {
+                    "frontend": "Front-end",
+                    "backend": "Back-end",
+                    "tools": "Tools"
+                }
+            },
+            "career": {
+                "label": "Career",
+                "items": {
+                    "experience": "Experience",
+                    "education": "Education",
+                    "goals": "Goals"
+                }
+            },
+            "about": {
+                "label": "About",
+                "items": {
+                    "profile": "Profile",
+                    "workStyle": "Work style",
+                    "whyPortfolio": "Why this portfolio"
+                }
+            },
+            "contact": {
+                "label": "Contact",
+                "items": {
+                    "message": "Contact me",
+                    "linkedin": "LinkedIn",
+                    "github": "GitHub"
+                }
+            }
+        },
+        "popupContent": {
+            "projects": {
+                "title": "Hunter profile",
+                "infoTitle": "Completed quests",
+                "description": "The Felyne presents the main projects: interfaces, dashboards, workflows, APIs, and interactive web experiences.",
+                "stats": [
+                    [
+                        "08",
+                        "Quests"
+                    ],
+                    [
+                        "03",
+                        "Boss fights"
+                    ],
+                    [
+                        "12",
+                        "Features"
+                    ],
+                    [
+                        "A",
+                        "Rank"
+                    ]
+                ],
+                "tags": [
+                    "React",
+                    "Next.js",
+                    "Bubble",
+                    "API",
+                    "UI"
+                ],
+                "inventory": [
+                    "Skailup",
+                    "Dashboard",
+                    "Workflow",
+                    "Portfolio",
+                    "API"
+                ]
+            },
+            "skills": {
+                "title": "Skills",
+                "infoTitle": "Technical equipment",
+                "description": "Front-oriented stack, API integration, product logic, debugging, and clean interfaces.",
+                "stats": [
+                    [
+                        "Front",
+                        "Style"
+                    ],
+                    [
+                        "Back",
+                        "API"
+                    ],
+                    [
+                        "No-code",
+                        "Bubble"
+                    ],
+                    [
+                        "UI",
+                        "Focus"
+                    ]
+                ],
+                "tags": [
+                    "JavaScript",
+                    "React",
+                    "CSS",
+                    "Node",
+                    "SQL"
+                ],
+                "inventory": [
+                    "JS",
+                    "React",
+                    "CSS",
+                    "Node",
+                    "Git"
+                ]
+            },
+            "career": {
+                "title": "Career",
+                "infoTitle": "Hunter's journal",
+                "description": "Summary of the career path, experience, learning, and professional goals.",
+                "stats": [
+                    [
+                        "XP",
+                        "Field"
+                    ],
+                    [
+                        "Build",
+                        "Product"
+                    ],
+                    [
+                        "Debug",
+                        "Routine"
+                    ],
+                    [
+                        "Growth",
+                        "Goal"
+                    ]
+                ],
+                "tags": [
+                    "Product",
+                    "Web",
+                    "Startup",
+                    "Autonomy"
+                ],
+                "inventory": [
+                    "Exp.",
+                    "Education",
+                    "Goals",
+                    "Missions"
+                ]
+            },
+            "about": {
+                "title": "About",
+                "infoTitle": "Hunter profile",
+                "description": "A profile focused on creation, logic, experimentation, and interfaces inspired by game worlds.",
+                "stats": [
+                    [
+                        "Creative",
+                        "Mindset"
+                    ],
+                    [
+                        "Tech",
+                        "Base"
+                    ],
+                    [
+                        "UX",
+                        "Vision"
+                    ],
+                    [
+                        "Lore",
+                        "Style"
+                    ]
+                ],
+                "tags": [
+                    "Creative",
+                    "Curious",
+                    "Structured",
+                    "Versatile"
+                ],
+                "inventory": [
+                    "Profile",
+                    "Method",
+                    "Universe",
+                    "Vision"
+                ]
+            },
+            "contact": {
+                "title": "Contact",
+                "infoTitle": "Gathering hub",
+                "description": "The links and contact methods are grouped here. The Felyne keeps the camp open.",
+                "stats": [
+                    [
+                        "Mail",
+                        "Open"
+                    ],
+                    [
+                        "GitHub",
+                        "Code"
+                    ],
+                    [
+                        "LinkedIn",
+                        "Pro"
+                    ],
+                    [
+                        "Ready",
+                        "Contact"
+                    ]
+                ],
+                "tags": [
+                    "Mail",
+                    "LinkedIn",
+                    "GitHub"
+                ],
+                "inventory": [
+                    "Message",
+                    "LinkedIn",
+                    "GitHub"
+                ]
+            }
+        },
+        "debug": {
+            "routeActive": "Active route:",
+            "activeTab": "Active tab:",
+            "modelLoadError": "Model loading error {{url}}:"
+        }
+    }
+}

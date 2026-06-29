@@ -1,0 +1,260 @@
+{
+    "lang_fr": {
+        "meta": {
+            "pageTitle": "Portfolio Camp de Chasseur"
+        },
+        "startScreen": {
+            "title": "Portfolio du Hunter",
+            "hint": "Clique pour entrer dans le camp"
+        },
+        "camp": {
+            "menuTitle": "Menu",
+            "defaultSubmenuLabel": "Projets",
+            "felyneHint":"Parler au Felyne",
+            "replayButton": "↻"
+        },
+        "popup": {
+            "kicker": "Carte de guilde",
+            "title": "Profil du chasseur",
+            "closeLabel": "Fermer",
+            "defaultInfoTitle": "Présentation",
+            "defaultDescription": "Sélectionne un onglet pour afficher les informations associées."
+        },
+        "equipment": {
+            "head": "Tête",
+            "chest": "Torse",
+            "arms": "Bras",
+            "waist": "Taille",
+            "legs": "Jambes"
+        },
+        "accessibility": {
+            "tabLabel": "Onglet {{label}}"
+        },
+        "menu": {
+            "projects": {
+                "label": "Projets",
+                "items": {
+                    "featured": "Projets phares",
+                    "all": "Tous les projets",
+                    "technicalCases": "Cas techniques"
+                }
+            },
+            "skills": {
+                "label": "Compétences",
+                "items": {
+                    "frontend": "Front-end",
+                    "backend": "Back-end",
+                    "tools": "Outils"
+                }
+            },
+            "career": {
+                "label": "Parcours",
+                "items": {
+                    "experience": "Expérience",
+                    "education": "Formation",
+                    "goals": "Objectifs"
+                }
+            },
+            "about": {
+                "label": "À propos",
+                "items": {
+                    "profile": "Profil",
+                    "workStyle": "Style de travail",
+                    "whyPortfolio": "Pourquoi ce portfolio"
+                }
+            },
+            "contact": {
+                "label": "Contact",
+                "items": {
+                    "message": "Me contacter",
+                    "linkedin": "LinkedIn",
+                    "github": "GitHub"
+                }
+            }
+        },
+        "popupContent": {
+            "projects": {
+                "title": "Profil du chasseur",
+                "infoTitle": "Quêtes terminées",
+                "description": "Le Felyne présente les projets principaux : interfaces, tableaux de bord, flux de travail, API et expériences web interactives.",
+                "stats": [
+                    [
+                        "08",
+                        "Quêtes"
+                    ],
+                    [
+                        "03",
+                        "Combats de boss"
+                    ],
+                    [
+                        "12",
+                        "Fonctionnalités"
+                    ],
+                    [
+                        "A",
+                        "Rang"
+                    ]
+                ],
+                "tags": [
+                    "React",
+                    "Next.js",
+                    "Bubble",
+                    "API",
+                    "Interface"
+                ],
+                "inventory": [
+                    "Skailup",
+                    "Tableau de bord",
+                    "Flux de travail",
+                    "Portfolio",
+                    "API"
+                ]
+            },
+            "skills": {
+                "title": "Compétences",
+                "infoTitle": "Équipement technique",
+                "description": "Stack orientée front-end, intégration API, logique produit, débogage et interfaces propres.",
+                "stats": [
+                    [
+                        "Front",
+                        "Style"
+                    ],
+                    [
+                        "Back",
+                        "API"
+                    ],
+                    [
+                        "No-code",
+                        "Bubble"
+                    ],
+                    [
+                        "Interface",
+                        "Priorité"
+                    ]
+                ],
+                "tags": [
+                    "JavaScript",
+                    "React",
+                    "CSS",
+                    "Node",
+                    "SQL"
+                ],
+                "inventory": [
+                    "JS",
+                    "React",
+                    "CSS",
+                    "Node",
+                    "Git"
+                ]
+            },
+            "career": {
+                "title": "Parcours",
+                "infoTitle": "Carnet de chasse",
+                "description": "Résumé du parcours, des expériences, des apprentissages et des objectifs professionnels.",
+                "stats": [
+                    [
+                        "XP",
+                        "Terrain"
+                    ],
+                    [
+                        "Création",
+                        "Produit"
+                    ],
+                    [
+                        "Débogage",
+                        "Routine"
+                    ],
+                    [
+                        "Progression",
+                        "Objectif"
+                    ]
+                ],
+                "tags": [
+                    "Produit",
+                    "Web",
+                    "Startup",
+                    "Autonomie"
+                ],
+                "inventory": [
+                    "Exp.",
+                    "Formation",
+                    "Objectifs",
+                    "Missions"
+                ]
+            },
+            "about": {
+                "title": "À propos",
+                "infoTitle": "Profil du chasseur",
+                "description": "Un profil orienté création, logique, expérimentation et interfaces inspirées des univers de jeu.",
+                "stats": [
+                    [
+                        "Créa",
+                        "État d’esprit"
+                    ],
+                    [
+                        "Tech",
+                        "Base"
+                    ],
+                    [
+                        "UX",
+                        "Vision"
+                    ],
+                    [
+                        "Univers",
+                        "Style"
+                    ]
+                ],
+                "tags": [
+                    "Créatif",
+                    "Curieux",
+                    "Structuré",
+                    "Polyvalent"
+                ],
+                "inventory": [
+                    "Profil",
+                    "Méthode",
+                    "Univers",
+                    "Vision"
+                ]
+            },
+            "contact": {
+                "title": "Contact",
+                "infoTitle": "Camp de ralliement",
+                "description": "Les liens et moyens de contact sont regroupés ici. Le Felyne garde le camp ouvert.",
+                "stats": [
+                    [
+                        "Mail",
+                        "Ouvert"
+                    ],
+                    [
+                        "GitHub",
+                        "Code"
+                    ],
+                    [
+                        "LinkedIn",
+                        "Pro"
+                    ],
+                    [
+                        "Prêt",
+                        "Contact"
+                    ]
+                ],
+                "tags": [
+                    "Mail",
+                    "LinkedIn",
+                    "GitHub"
+                ],
+                "inventory": [
+                    "Message",
+                    "LinkedIn",
+                    "GitHub"
+                ]
+            }
+        },
+        "debug": {
+            "routeActive": "Route active :",
+            "activeTab": "Onglet actif :",
+            "modelLoadError": "Erreur chargement modèle {{url}}:"
+        }
+    }
+}
