@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Hunter Camp Portfolio</title>
+    <link rel="stylesheet" href="thank-you.css" />
+</head>
+
+<body>
+    <audio id="creditsMusic" src="./public/sounds/songs/felyne_song.mp3" loop preload="auto"></audio>
+
+    <button id="musicStartButton" class="music-start-button" type="button">
+        Start Music
+    </button>
+
+    <a class="back-to-camp" href="index.html" aria-label="Back to camp">
+        ↩
+    </a>
+
+    <main class="thanks-page">
+        <section class="thanks-board">
+            <div class="credits-screen">
+                <div class="credits-overlay"></div>
+
+                <div class="credits-content">
+                    <section class="credit-section">
+                        <h2>Hunter Camp Portfolio</h2>
+                        <p>Created by</p>
+                        <h3>GPT 5.5</h3>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Idea</h2>
+                        <p>By</p>
+                        <h3>Ali <a href="https://github.com/Salman-Ali05" target="_blank">GitHub</a></h3>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Project Direction</h2>
+                        <p>Monster Hunter-inspired interactive portfolio</p>
+                        <p>Camp interface, Felyne guide, hunter profile, 3D scenes, and custom UI flow.</p>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Core Technologies</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Vanilla JavaScript</li>
+                            <li>Three.js</li>
+                            <li>Font-Awesome</li>
+                        </ul>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Visual Direction</h2>
+                        <ul>
+                            <li>Monster Hunter: World / Iceborne and Wilds inspired color palette</li>
+                            <li>Hunter camp atmosphere</li>
+                            <li>Guild card-style profile popup</li>
+                            <li>Camp menu-inspired navigation</li>
+                            <li>Frosted blue and gold UI accents</li>
+                        </ul>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>3D Assets Used (<a href="https://sketchfab.com" target="_blank">Sketchfab</a>)</h2>
+                        <ul>
+                            <li><a href="https://skfb.ly/oYqEX" target="_blank">Felyne model</a></li>
+                            <li><a href="https://skfb.ly/pKFUB" target="_blank">Hunter model</a></li>
+                            <li><a href="https://skfb.ly/o7WxJ" target="_blank">Campfire model</a></li>
+                            <li><a href="https://monsterhunterwiki.org/wiki/Main_Page" target="_blank">Menu icon set</a></li>
+                            <li><a href="https://polyhaven.com/a/curly_teddy_checkered" target="_blank">Tent fabric texture</a></li>
+                        </ul>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Audio Assets (YouTube)</h2>
+                        <ul>
+                            <li>Felyne interaction sounds</li>
+                            <li>Felyne ending theme</li>
+                            <li>Camp ambience direction</li>
+                        </ul>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Special Thanks</h2>
+                        <ul>
+                            <li>The Monster Hunter series for the camp atmosphere inspiration</li>
+                            <li>The 3D artist community</li>
+                            <li>Open web tools and documentation</li>
+                            <li>Every hunter who enters the camp</li>
+                            <li>Open AI GPT</li>
+                        </ul>
+                    </section>
+
+                    <section class="credit-section">
+                        <h2>Final Message</h2>
+                        <p>
+                            This portfolio was built as a small interactive camp:
+                            a place to explore projects, skills, experience, and contact links
+                            through a game-inspired interface. I didn't coded everything from scratch, I was bored at work and decided to test the AI to see how far it could go. I was surprised by how smooth it went, and I had fun ordering the AI to do it, I still had to correct a lot of things myself. I hope you enjoy exploring the camp and finding out more about me and my work.
+                            And it's a proof of love for the Monster hunter licence, of course all the credits goes to the <a href="https://www.capcom.com/" target="_blank">Capcom licence</a>, making a such great game and universe. I hope you enjoy exploring the camp and finding out more about me and my work.
+                        </p>
+                    </section>
+
+                    <section class="credit-section credit-final">
+                        <h2>Quest Complete</h2>
+                        <p>Thank you for visiting.</p>
+                    </section>
+                </div>
+            </div>
+
+            <section class="thank-you-panel">
+                <h1 class="thank-you-title" aria-label="Thank you">
+                    <span style="--i: 0">T</span>
+                    <span style="--i: 1">H</span>
+                    <span style="--i: 2">A</span>
+                    <span style="--i: 3">N</span>
+                    <span style="--i: 4">K</span>
+                    <span class="space" style="--i: 5"></span>
+                    <span style="--i: 6">Y</span>
+                    <span style="--i: 7">O</span>
+                    <span style="--i: 8">U</span>
+                </h1>
+
+                <div class="felyne-dance-zone">
+                    <img class="felyne-dance" data-src="./public/menu/felyne.gif" alt="Dancing Felyne" />
+                    <img class="felyne-dance" data-src="./public/menu/felyne.gif" alt="Dancing Felyne" />
+                    <img class="felyne-dance" data-src="./public/menu/felyne.gif" alt="Dancing Felyne" />
+                </div>
+            </section>
+        </section>
+    </main>
+    <script>
+        const creditsMusic = document.getElementById("creditsMusic");
+        const musicStartButton = document.getElementById("musicStartButton");
+        const felyneGifs = document.querySelectorAll(".felyne-dance");
+
+        let hasStartedCredits = false;
+
+        const loadFelyneGifs = () => {
+            felyneGifs.forEach((gif) => {
+                const gifSource = gif.dataset.src;
+
+                if (!gifSource || gif.src) return;
+
+                gif.src = gifSource;
+            });
+        };
+
+        const startCredits = () => {
+            if (hasStartedCredits) return;
+
+            hasStartedCredits = true;
+
+            document.body.classList.add("is-started");
+            loadFelyneGifs();
+
+            if (creditsMusic) {
+                creditsMusic.volume = 0.55;
+
+                creditsMusic.play().catch((error) => {
+                    console.warn("Music could not start:", error);
+                });
+            }
+
+            musicStartButton.classList.add("is-hidden");
+        };
+
+        musicStartButton.addEventListener("click", () => {
+            startCredits();
+        });
+    </script>
+</body>
+
+</html>
